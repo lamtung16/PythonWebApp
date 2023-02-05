@@ -15,17 +15,20 @@
         <div class="row">
             <div class="col-4">
                 <div class="p-3 border bg-light">
-                    Col One: {{ name }}
+                    <form class = "grid" action = "/result" method="POST">
+                        <label for="Name">Enter your t: </label>
+                        <input type="text" name="t" id="t">
+                        <input type="submit" class="file_submit">
+                    </form>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-8">
                 <div class="p-3 border bg-light">
-                    Col Two: {{ age }}
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="p-3 border bg-light">
-                    Col Three: {{ age }}
+                    {% if t %}
+                        <h4> f(x) = x**{{t}} </h4>
+                    {% endif %}
+                    
+                    <img src="/static/image.png">
                 </div>
             </div>
         </div>
